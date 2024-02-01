@@ -1,0 +1,221 @@
+:root {
+  /* Primary Colors  */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral Colors */
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 18px;
+}
+
+/* START HEADER CSS */
+header {
+  background-image: url("./images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 538px;
+  text-align: center;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  letter-spacing: 5px;
+  padding: 25px;
+  color: white;
+  text-transform: uppercase;
+}
+
+header .arrow-down {
+  padding-top: 30px;
+  height: 140px;
+}
+/* END HEADER CSS */
+
+/* START NAV CSS */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 30px;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+}
+
+nav .menu {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  height: 0;
+}
+nav .menu ul {
+  margin: 0 30px;
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+nav .menu li:not(:last-child) {
+  padding: 17px;
+  list-style: none;
+}
+
+nav .menu li:last-child {
+  padding: 10px;
+  list-style: none;
+}
+
+nav .menu a {
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
+  color: var(--dark-grayish-blue);
+}
+
+nav .menu a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav .menu .contact {
+  background-color: var(--yellow);
+  border: none;
+  width: 130px;
+  padding: 15px;
+  border-radius: 25px;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+/* END NAV CSS */
+
+/* START SERVICES CSS */
+.services article {
+  text-align: center;
+}
+
+.services article h2 {
+  padding-top: 50px;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.services article p {
+  padding: 25px 0px;
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5;
+  color: var(--dark-grayish-blue);
+}
+
+.services article a {
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.services .tranform-brand-section,
+.services .stand-out-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.services .tranform-brand-section article,
+.services .stand-out-section article {
+  padding: 25px;
+}
+
+.services .tranform-brand-section img {
+  background-image: url("./images/mobile/image-transform.jpg");
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.services .stand-out-section img {
+  background-image: url("./images/mobile/image-stand-out.jpg");
+  height: 315px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services .graphic-design-section article,
+.services .photography-section article {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.services .graphic-design-section article,
+.services .photography-section article {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.services .graphic-design-section {
+  background-image: url("./images/mobile/image-graphic-design.jpg");
+  color: var(--very-dark-desaturated-blue);
+  background-size: cover;
+  height: 600px;
+}
+
+.services .graphic-design-section article,
+.services .photography-section article {
+  position: relative;
+  bottom: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.services .graphic-design-section p,
+.services .photography-section p {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.services .photography-section {
+  background-image: url("./images/mobile/image-photography.jpg");
+  color: var(--very-dark-desaturated-blue);
+  background-size: cover;
+  height: 600px;
+}
+/* END SERVICES CSS */
+
+/* START FOOTER CSS */
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* END FOOTER CSS */

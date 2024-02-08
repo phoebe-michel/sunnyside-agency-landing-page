@@ -126,34 +126,60 @@ nav .menu .contact {
 }
 
 .services article h2 {
-  padding-top: 50px;
+  padding-top: 40px;
   font-family: "Fraunces", serif;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 .services article p {
-  padding: 25px 0px;
+  padding: 30px 0px 20px;
   font-family: "Barlow", sans-serif;
   line-height: 1.5;
   color: var(--dark-grayish-blue);
 }
 
-.services article a {
+.services .learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services .text {
   text-transform: uppercase;
   font-family: "Fraunces", serif;
   font-weight: 900;
+  font-size: 16px;
+}
+
+.services .text-underline {
+  height: 10px;
+  background-color: black;
+  width: 130px;
+  position: relative;
+  border-radius: 5px;
+  bottom: 7px;
+  opacity: 0.25;
 }
 
 .services .tranform-brand-section,
 .services .stand-out-section {
   display: flex;
   flex-direction: column-reverse;
+  padding-bottom: 40px;
 }
 
 .services .tranform-brand-section article,
 .services .stand-out-section article {
-  padding: 25px;
+  padding: 20px 25px;
+}
+
+.services .tranform-brand-section .learn-more .text-underline {
+  background-color: var(--yellow);
+}
+
+.services .stand-out-section .learn-more .text-underline {
+  background-color: var(--soft-red);
 }
 
 .services .tranform-brand-section img {
@@ -334,6 +360,7 @@ footer {
 .footer-nav ul {
   display: flex;
   justify-content: center;
+  padding-top: 15px;
 }
 
 .footer-nav li {
@@ -343,7 +370,7 @@ footer {
   color: var(--dark-moderate-cyan);
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-  padding: 30px;
+  padding: 20px 20px;
 }
 
 footer .social-media-links {
@@ -354,7 +381,7 @@ footer .social-media-links a {
   padding: 0 10px;
 }
 footer .attribution {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 11px;
   text-align: center;
 }

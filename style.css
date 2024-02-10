@@ -42,7 +42,7 @@ header {
 
 header h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-family: "Fraunces", serif;
   font-weight: 700;
   letter-spacing: 5px;
@@ -63,9 +63,17 @@ header .arrow-down {
   padding: 30px 25px;
 }
 
+.navbar-brand .logo {
+  height: 1.5rem;
+}
+
 .navbar-toggler {
   background: none;
   border: none;
+}
+
+.navbar-toggler img {
+  height: 1.3rem;
 }
 
 nav .menu {
@@ -129,7 +137,7 @@ nav .menu .contact {
   padding-top: 40px;
   font-family: "Fraunces", serif;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 1.7rem;
 }
 
 .services article p {
@@ -171,7 +179,10 @@ nav .menu .contact {
 
 .services .tranform-brand-section article,
 .services .stand-out-section article {
-  padding: 20px 25px;
+  /* padding: 20px 25px; */
+  padding: 2rem 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .services .tranform-brand-section .learn-more .text-underline {
@@ -185,49 +196,45 @@ nav .menu .contact {
 .services .tranform-brand-section img {
   background-image: url("./images/mobile/image-transform.jpg");
   min-height: 300px;
+  width: 100%;
   height: auto;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   border: none;
 }
 
 .services .stand-out-section img {
   background-image: url("./images/mobile/image-stand-out.jpg");
   height: auto;
+  width: 100%;
   background-size: cover;
   background-position: center center;
   min-height: 315px;
-  background-size: cover;
   background-repeat: no-repeat;
-}
-
-.services .graphic-design-section article,
-.services .photography-section article {
-  padding: 20px;
-  font-size: 16px;
-}
-
-.services .graphic-design-section article,
-.services .photography-section article {
-  padding: 20px;
-  font-size: 16px;
 }
 
 .services .graphic-design-section {
   background-image: url("./images/mobile/image-graphic-design.jpg");
   color: var(--very-dark-desaturated-blue);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 600px;
 }
 
 .services .graphic-design-section article,
 .services .photography-section article {
+  padding: 20px;
+  font-size: 16px;
   position: relative;
   bottom: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .services .graphic-design-section p,
@@ -239,7 +246,10 @@ nav .menu .contact {
   background-image: url("./images/mobile/image-photography.jpg");
   color: var(--very-dark-desaturated-blue);
   background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 600px;
+  width: 100%;
 }
 /* END SERVICES CSS */
 
@@ -260,6 +270,8 @@ nav .menu .contact {
 
 .client-testimonial-group {
   padding-top: 25px;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .client {
@@ -298,14 +310,18 @@ nav .menu .contact {
   display: grid;
 }
 
-.image-gallery .milk-bottles {
-  background: url("./images/mobile/image-gallery-milkbottles.jpg");
-  background-size: cover;
+.image-gallery div[role="img"] {
   background-position: center center;
-  grid-row: 1;
-  grid-column: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
   min-height: 200px;
+}
+
+.image-gallery .milk-bottles {
+  background: url("./images/mobile/image-gallery-milkbottles.jpg");
+  grid-row: 1;
+  grid-column: 1;
   width: 100%;
 }
 
@@ -313,33 +329,21 @@ nav .menu .contact {
   grid-row: 1;
   grid-column: 2;
   background: url("./images/mobile/image-gallery-orange.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: auto;
   max-width: 100%;
-  min-height: 200px;
 }
 
 .image-gallery .cone {
   grid-row: 2;
   grid-column: 1;
   background: url("./images/mobile/image-gallery-cone.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: auto;
   max-width: 100%;
-  min-height: 200px;
 }
 
 .image-gallery .sugar-cubes {
   grid-row: 2;
   grid-column: 2;
   background: url("./images/mobile/image-gallery-sugar-cubes.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: auto;
   max-width: 100%;
-  min-height: 200px;
 }
 /* END IMAGE GALLERY CSS */
 
@@ -391,3 +395,175 @@ footer .attribution a {
 }
 
 /* END FOOTER CSS */
+
+@media screen and (min-width: 480px) {
+  .services .tranform-brand-section img,
+  .services .stand-out-section img {
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* START MAIN CSS */
+  /* .landing-page-container {
+    max-width: 1440px;
+  } */
+  /* END MAIN CSS */
+
+  /* START HEADER CSS */
+  header {
+    background-image: url("./images/desktop/image-header.jpg");
+    min-height: 800px;
+  }
+  header h1 {
+    padding: 50px 25px;
+    font-size: 3.5rem;
+  }
+  /* END HEADER CSS */
+
+  /* START SERVICES CSS */
+  .services {
+    display: grid;
+    grid-template-areas:
+      "transform transform"
+      "stand-out stand-out"
+      "graphic-design photography";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services .tranform-brand-section,
+  .services .stand-out-section {
+    padding-bottom: 0;
+    display: flex;
+  }
+
+  .services .tranform-brand-section article,
+  .services .stand-out-section article {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+  }
+
+  .services .tranform-brand-section {
+    flex-direction: row;
+    grid-area: transform;
+    height: 50vh;
+  }
+
+  .services .tranform-brand-section img {
+    background-image: url("./images/desktop/image-transform.jpg");
+    width: 50%;
+  }
+
+  .services .stand-out-section {
+    flex-direction: row-reverse;
+    grid-area: stand-out;
+    height: 50vh;
+  }
+
+  .services .stand-out-section img {
+    background-image: url("./images/desktop/image-stand-out.jpg");
+    width: 50%;
+    height: auto;
+  }
+
+  .services article h2 {
+    font-size: 22px;
+  }
+
+  .services article p {
+    padding: 20px 0px 0px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .services .learn-more {
+    align-items: flex-start;
+  }
+
+  .services .learn-more .text {
+    font-size: 12px;
+  }
+
+  .services .learn-more .text-underline {
+    width: 100px;
+    position: relative;
+    right: 5px;
+  }
+
+  .services .graphic-design-section {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+    grid-area: graphic-design;
+  }
+
+  .services .photography-section {
+    background-image: url("./images/desktop/image-photography.jpg");
+    grid-area: photography;
+  }
+  /* END SERVICES CSS */
+}
+
+@media screen and (min-width: 768px) {
+  /* START IMAGE GALLERY CSS */
+  .image-gallery .milk-bottles {
+    grid-row: 1;
+    grid-column: 1;
+    background: url("./images/desktop/image-gallery-milkbottles.jpg");
+  }
+
+  .image-gallery .orange {
+    grid-row: 1;
+    grid-column: 2;
+    background: url("./images/desktop/image-gallery-orange.jpg");
+  }
+
+  .image-gallery .cone {
+    grid-row: 1;
+    grid-column: 3;
+    background: url("./images/desktop/image-gallery-cone.jpg");
+  }
+
+  .image-gallery .sugar-cubes {
+    grid-row: 1;
+    grid-column: 4;
+    background: url("./images/desktop/image-gallery-sugarcubes.jpg");
+
+    /* END IMAGE GALLERY CSS */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header h1 {
+    padding: 5rem;
+  }
+  .services .graphic-design-section {
+    height: 50vh;
+  }
+
+  .services .photography-section {
+    height: 50vh;
+  }
+
+  .testimonial-section {
+    padding: 120px 20px;
+    margin: 0 70px;
+  }
+  .client-testimonial-group {
+    display: flex;
+    max-width: unset;
+  }
+
+  .image-gallery div[role="img"] {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    min-height: 24rem;
+  }
+}
+
+/* @media screen and (min-width: 600px) {
+} */
